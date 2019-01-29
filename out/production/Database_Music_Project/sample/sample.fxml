@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <Tab closable="false" text="Searches">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <VBox alignment="CENTER" layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+                <Label alignment="CENTER" layoutX="100.0" text="Pandafi" textAlignment="CENTER" textFill="#000700">
+                    <font>
+                        <Font name="Castellar" size="30.0" />
+                    </font>
+                </Label>
+                <Accordion>
+                    <panes>
+                        <TitledPane animated="false" text="Album">
+                            <font>
+                                <Font name="Castellar" size="12.0" />
+                            </font>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <TextField fx:id="albumText" layoutX="226.0" layoutY="33.0" />
+                                <ToolBar layoutX="239.0" layoutY="78.0" prefHeight="40.0" prefWidth="138.0">
+                                    <Button mnemonicParsing="false" onAction="#albumNamePress" text="Name">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#albumGenrePress" text="Genre">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                </ToolBar>
+                            </AnchorPane>
+                        </TitledPane>
+                        <TitledPane animated="false" text="Artist">
+                            <font>
+                                <Font name="Castellar" size="12.0" />
+                            </font>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <TextField fx:id="artistText" layoutX="225.0" layoutY="41.0" />
+                                <ToolBar layoutX="97.0" layoutY="68.0" prefHeight="50.0" prefWidth="405.0">
+                                    <Button mnemonicParsing="false" onAction="#artistFirstNamePress" text="First Name">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#artistLastNamePress" text="Last Name">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                    <Button layoutX="206.0" layoutY="13.0" mnemonicParsing="false" onAction="#artistStageNamePress" text="Stage Name">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                    <Button layoutX="66.0" layoutY="13.0" mnemonicParsing="false" onAction="#artistAgePress" text="Age">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                    <Button layoutX="164.0" layoutY="13.0" mnemonicParsing="false" onAction="#artistBioPress" text="Bio">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                </ToolBar>
+                            </AnchorPane>
+                        </TitledPane>
+                        <TitledPane animated="false" text="Song">
+                            <font>
+                                <Font name="Castellar" size="12.0" />
+                            </font>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <TextField fx:id="songText" layoutX="219.0" layoutY="32.0" />
+                                <ToolBar layoutX="181.0" layoutY="61.0" prefHeight="58.0" prefWidth="236.0">
+                                    <Button mnemonicParsing="false" onAction="#songNamePress" text="Name">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#songDurationPress" text="Duration">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                    <Button layoutX="66.0" layoutY="13.0" mnemonicParsing="false" onAction="#songGenrePress" text="Genre">
+                                        <font>
+                                            <Font name="Castellar" size="12.0" />
+                                        </font>
+                                    </Button>
+                                </ToolBar>
+                            </AnchorPane>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+                <TextArea fx:id="searchOutput" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Your answer here!">
+                    <font>
+                        <Font name="Castellar" size="12.0" />
+                    </font>
+                </TextArea>
+            </VBox>
+        </AnchorPane>
+    </Tab>
+    <Tab text="Trivia">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <ToolBar layoutX="96.0" layoutY="38.0" prefHeight="40.0" prefWidth="408.0">
+                <Button mnemonicParsing="false" onAction="#longestSong" text="Longest Song">
+                    <font>
+                        <Font name="Castellar" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#longestAlbum" text="Longest Album">
+                    <font>
+                        <Font name="Castellar" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="66.0" layoutY="13.0" mnemonicParsing="false" onAction="#shortestAlbum" prefWidth="135.0" text="Shortest Album">
+                    <font>
+                        <Font name="Castellar" size="12.0" />
+                    </font>
+                </Button>
+            </ToolBar>
+            <TextArea fx:id="triviaOutput" editable="false" layoutX="200.0" layoutY="148.0" prefHeight="200.0" prefWidth="200.0" promptText="Wouldn't you Like to know!" />
+            <ToolBar layoutX="160.0" layoutY="78.0" prefHeight="40.0" prefWidth="281.0">
+                <Button mnemonicParsing="false" onAction="#totalDuration" text="Total Duration">
+                    <font>
+                        <Font name="Castellar" size="12.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#highestPaid" text="Highest Paid">
+                    <font>
+                        <Font name="Castellar" size="12.0" />
+                    </font>
+                </Button>
+            </ToolBar>
+        </AnchorPane>
+    </Tab>
+</TabPane>
